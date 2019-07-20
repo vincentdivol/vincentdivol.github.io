@@ -1,0 +1,87 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Vincent Divol</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+<td id="layout-menu">
+<div class="menu-category">Vincent Divol</div>
+<div class="menu-item"><a href="index.html" class="current">Home</a></div>
+</td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Vincent Divol</h1>
+</div>
+<table class="imgtable"><tr><td>
+<img src="moi.jpg" height="270"/> &nbsp;</td>
+<td align="left"><h2>Briefly</h2>
+<p> I am a first year PhD student working under the supervision of <a href="http://massart.pascal.free.fr/Site/Home.html" target="_blank"> Pascal Massart </a> and <a href="http://geometrica.saclay.inria.fr/team/Fred.Chazal/" target="_blank"> Frédéric Chazal</a>. I work at <a href="http://www.u-psud.fr/fr/index.html" target="_blank"> Université Paris-Sud </a> and at <a href="http://www.inria.fr/centre/saclay" target="_blank"> Inria Saclay </a> in the <a href="https://team.inria.fr/datashape/" target="_blank">DataShape</a> team. 
+<p>
+My two main research interests are geometric inference and topological data analysis (TDA). My work in geometric inference consists in developping selection techniques for estimating geometric objects (such as homology groups, manifolds or tangent spaces). Concerning TDA, I focused on studying persistence diagrams (a popular tool to sum up the topological information underlying a dataset) from a statistical perspective, e.g. proving laws of large numbers, providing properties of expectations, etc.
+</p>
+<p>Here is a short CV : <a href="cv_personal_page_en.pdf">English</a>, <a href="cv_personal_page_fr.pdf">French</a>.</p>
+<h2>Contact</h2>
+<ul>
+<li><p>E-mail: vincent [dot] divol [at] inria [dot] fr</p>
+</li>
+<li><p>Physical address: 
+ <ul>
+ <li>
+INRIA Saclay, <a href="https://www.google.fr/maps/place/Inria+Saclay+Île-de-France/@48.7146403,2.2056539,15z/data=!4m5!3m4!1s0x0:0x1ce0964fac2d9f2a!8m2!3d48.7146403!4d2.2056539"> 1 rue Honoré d'Estienne d'Orves, 91120 Palaiseau</a>.
+</li>
+<li>
+Laboratoire de mathématiques d'Orsay, <a href="https://www.google.fr/maps/place/Faculté+des+Sciences+d'Orsay+-+Département+de+Mathématiques/@48.700572,2.177765,15z/data=!4m5!3m4!1s0x0:0xc0ed96d888ec6531!8m2!3d48.700572!4d2.177765"> Bâtiment 307, Rue Michel Magat, 91400 Orsay</a>.
+</li>
+</ul>
+</p>
+</li>
+</ul>
+</td></tr></table>
+<h2>Publications and Preprints</h2>
+<ul>
+<li><p>V. Divol, T. Lacombe <b>Understanding the topology and the geometry of the persistence diagram space via optimal partial transport</b>.<br />[<a href="https://hal.inria.fr/hal-01970466">hal</a>, <a href="https://arxiv.org/abs/1901.03048">arXiv</a>], 2019, preprint</i>. <span class="toggle-trigger">[Show Abstract]<span> 
+<div class="toggle-wrap">
+<b>Abstract:</b> Despite the obvious similarities between the metrics used in topological data analysis and those of optimal transport, an optimal-transport based formalism to study persistence diagrams and similar topological descriptors has yet to come. In this article, by considering the space of persistence diagrams as a measure space, and by observing that its metrics can be expressed as solutions of optimal partial transport problems, we introduce a generalization of persistence diagrams, namely Radon measures supported on the upper half plane. Such measures naturally appear in topological data analysis when considering continuous representations of persistence diagrams (e.g. persistence surfaces) but also as limits for laws of large numbers on persistence diagrams or as expectations of probability distributions on the persistence diagrams space. We study the topological properties of this new space, which will also hold for the closed subspace of persistence diagrams. New results include a characterization of convergence with respect to transport metrics, the existence of Fréchet means for any distribution of diagrams, and an exhaustive description of continuous linear representations of persistence diagrams. We also showcase the usefulness of this framework to study random persistence diagrams by providing several statistical results made meaningful thanks to this new formalism.
+</div></p>
+</li>
+</ul>
+<ul>
+<li><p>V. Divol, W. Polonik <b>On the choice of weight functions for linear representations of persistence diagrams</b>.<br />[<a href="https://hal.inria.fr/hal-01833660">hal</a>, <a href="https://arxiv.org/abs/1807.03678">arXiv</a>], 2019, accepted for publication in <i>Journal of Applied and Computational Topology</i>. <span class="toggle-trigger">[Show Abstract]<span> 
+<div class="toggle-wrap">
+<b>Abstract:</b> Persistence diagrams are efficient descriptors of the topology of a point cloud. As they do not naturally belong to a Hilbert space, standard statistical methods cannot be directly applied to them. Instead, feature maps (or representations) are commonly used for the analysis. A large class of feature maps, which we call linear, depends on some weight functions, the choice of which is a critical issue. An important criterion to choose a weight function is to ensure stability of the feature maps with respect to Wasserstein distances on diagrams. We improve known results on the stability of such maps, and extend it to general weight functions. We also address the choice of the weight function by considering an asymptotic setting; assume that <img src="Xn.gif" alt="X_n" style="vertical-align: -2px"/> is an i.i.d. sample from a density on <img src="[0,1].gif" alt="[0,1]^d" style="vertical-align: -2px"/>. For the Čech and Rips filtrations, we characterize the weight functions for which the corresponding feature maps converge as <img src="n.gif" alt="n"/> approaches infinity, and by doing so, we prove laws of large numbers for the total persistences of such diagrams. Those two approaches (stability and convergence) lead to the same simple heuristic for tuning weight functions: if the data lies near a <img src="d.gif" alt="d"/>-dimensional manifold, then a sensible choice of weight function is the persistence to the power <img src="alpha.gif" alt="a"/> with <img src="alpha geq d.gif" alt="a >= d" style="vertical-align: -3px"/>.
+</div></p>
+</li>
+</ul>
+<ul>
+<li><p>F. Chazal, V. Divol <b>The density of expected persistence diagrams and its kernel based estimation</b>.<br />[<a href="http://drops.dagstuhl.de/opus/volltexte/2018/8739/pdf/LIPIcs-SoCG-2018-26.pdf">proceedings</a>, <a href="https://hal.archives-ouvertes.fr/hal-01716181">hal</a>, <a href="https://arxiv.org/abs/1802.10457">arXiv</a>], 2018, published in the Proceedings of the Symposium of Computational Geometry</i>. <span class="toggle-trigger">[Show Abstract]<span> 
+<div class="toggle-wrap">
+<b>Abstract:</b> Persistence diagrams play a fundamental role in Topological Data Analysis where they are used as topological descriptors of filtrations built on top of data. They consist in discrete multisets of points in the plane <img src="R2.gif" alt="R^2"/> that can equivalently be seen as discrete measures in <img src="R2.gif" alt="R^2"/>. When the data come as a random point cloud, these discrete measures become random measures whose expectation is studied in this paper. First, we show that for a wide class of filtrations, including the Čech and Rips-Vietoris filtrations, the expected persistence diagram, that is a deterministic measure on <img src="R2.gif" alt="R^2"/>, has a density with respect to the Lebesgue measure. Second, building on the previous result we show that the persistence surface recently introduced in [Adams & al., Persistence images: a stable vector representation of persistent homology] can be seen as a kernel estimator of this density. We propose a cross-validation scheme for selecting an optimal bandwidth, which is proven to be a consistent procedure to estimate the density.
+</div></p>
+</li>
+</ul>
+
+</td>
+</tr>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $(".toggle-trigger").click(function() {
+        $(this).parent().nextAll('.toggle-wrap').first().slideToggle('slow');
+    });
+});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128753599-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
