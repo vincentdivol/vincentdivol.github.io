@@ -1,0 +1,2 @@
+User-Agent: *
+Sitemap: https://vincentdivol.github.io/sitemap.xml
