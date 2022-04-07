@@ -1,0 +1,271 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!40!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\usepackage{bm, bbm}
+\usepackage{wasysym}
+\usepackage{marvosym}
+
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\usepackage[capitalize, noabbrev]{cleveref}
+\usepackage{fancyhdr}
+\usepackage[sc]{titlesec}
+\usepackage{lipsum}
+\usepackage{changepage} 
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[caption=false]{subfig}
+\usepackage[capitalize, noabbrev]{cleveref}
+
+
+
+\usepackage{enumitem}
+
+
+\newcommand{\p}[1]{\left(#1 \right)}
+\renewcommand{\b}[1]{\mathbf{#1 }}
+\newcommand{\dotp}[1]{\langle #1 \rangle}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\renewcommand{\t}[1]{\tilde{#1}}
+
+%%% Maths
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\eqdef}{=\vcentcolon}
+\newcommand{\op}[1]{\left\| #1  \right\|_{\mathrm{op}}}
+\newcommand{\ones}{\mathbf{1}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\VC}{\mathrm{VC}}
+\newcommand{\epi}{\mathrm{epi}}
+\newcommand{\dom}{\mathrm{dom}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\Id}{\mathrm{Id}}
+
+%%% Math operators
+
+\DeclareMathOperator*{\diam}{diam}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+
+
+%%% Letters
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\O}{\mathbb{O}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\S}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\Y}{\mathcal{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\renewcommand{\AA}{\mathcal{A}}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\EE}{\mathcal{E}}
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\GG}{\mathcal{G}}
+\newcommand{\HH}{\mathcal{H}}
+\newcommand{\II}{\mathcal{I}}
+\newcommand{\JJ}{\mathcal{J}}
+\newcommand{\KK}{\mathcal{K}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\NN}{\mathcal{N}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\QQ}{\mathcal{Q}}
+\newcommand{\RR}{\mathcal{R}}
+\newcommand{\Scal}{\mathcal{S}}
+\newcommand{\TT}{\mathcal{T}}
+\newcommand{\UU}{\mathcal{U}}
+\newcommand{\VV}{\mathcal{V}}
+\newcommand{\WW}{\mathcal{W}}
+\newcommand{\XX}{\mathcal{X}}
+\newcommand{\YY}{\mathcal{Y}}
+\newcommand{\ZZ}{\mathcal{Z}}
+
+\newcommand{\eps}{\varepsilon}
+
+\begin{document}
+
+\title{\sc Homework 8}
+\date{Due April 10 at 11pm} 
+\author{}
+\maketitle
+
+
+
+
+\newtheorem*{problem}{Problem}
+\newtheorem*{heuristic}{Heuristic}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{exercise}[theorem]{Exercise}
+
+
+Unless stated otherwise, justify any answers you give. You can work in groups, but each student
+must write their own solution based on their own understanding of the problem.
+
+When uploading your homework to Gradescope you will have to select the relevant pages
+for each question. Please submit each problem on a separate page (i.e., 1a and 1b can be on
+the same page but 1 and 2 must be on different pages). We understand that this may be
+cumbersome but this is the best way for the grading team to grade your homework assignments and provide feedback in a timely manner. Failure to adhere to these guidelines may
+result in a loss of points. Note that it may take some time to select the pages for your submission. Please plan accordingly. We suggest uploading your assignment at least 30 minutes
+before the deadline so you will have ample time to select the correct pages for your submission. If you are using \LaTeX, consider using the minted or listings packages for typesetting code.
+
+\medskip
+
+\begin{enumerate}
+%\item In class, we only covered the minimization of a function $f:\R^d\to \R$. In this first exercise, we investigate what happens if $f$ is only defined on a closed convex subset $\dom(f)$ of $\R^d$. Consider an initialization point $x^{(0)}\in \dom(f)$ and define the sublevel set $S=\{x\in \dom(f):\ f(x)\leq f(x^{(0)})\}$. We assume that $S$ is closed.
+\item  Let $f:\R^d\to \R$ be an $\alpha$-strongly convex and $\beta$-smooth function. In class, we studied gradient descent with constant step-size $s$, where $s$ has to be chosen smaller than $1/\beta$.  We here study an alternative method to find a step size $s$ in the gradient descent algorithm called \textbf{backtracking line search}. Given an iterate $x^t$ of the gradient descent, the next iterate is defined by 
+\begin{equation}
+x^{t+1} = x^t-s\nabla f(x^t).
+\end{equation}
+where $s$ is chosen in the following iterative way. Fix two parameters $0<\lambda <1/2$ and $0<\mu<1$ and consider the following iterative scheme.
+\begin{enumerate}
+\item[Step 1.] Start with $s=1$.
+\item[Step 2.] While $f(x^t-s\nabla f(x^t))>f(x^t)-\lambda s\|\nabla f(x^t)\|^2$, let $s\defeq \mu s$ and reiterate.
+\end{enumerate}
+\begin{enumerate}
+\item Assume that $f$ is $\beta$-smooth. Show that if $s<1/\beta$, then the backtracking line search stops. What is then the maximal number of iterations of the search?
+\item Show that if $\mu\leq \beta$, then the search stops at a value $s\geq \mu/\beta$. Conclude that
+\[ f(x^{t+1}) \leq f(x^t) - \lambda \min(1,\mu/\beta)\|\nabla f(x^t)\|^2.\]
+\item Use the previous question and argue as in the proof of Proposition 3.2 to conclude that after $T$ steps of gradient descent with backtracking line search, we have
+\[ f(x^T)-f(x^\star)\leq (1-2\alpha\lambda\min(1,\mu/\beta))^T (f(x^0)-f(x^\star)).\]
+Compare this rate of convergence to the rate obtained in Proposition 3.2. Is it better? Is it worse? What is an advantage of backtracking line search compared to the method proposed in Proposition 3.2 (constant step size)?
+\end{enumerate}
+%\item  In linear programming, we are looking for the minimum of a function of the form $x\in \R^d\mapsto \dotp{x,c}$ under linear constraints that can be expressed as $Ax\leq b$ where $A$ is a matrix of size $n\times d$ and $b\in \R^n$ (meaning that $\dotp{A_1,x}\leq b_1,\dots \dotp{A_n,x}\leq b_n$.
+%\begin{enumerate}
+%\item  Express this problem as the minimization of a convex function $f$ defined on some domain $\dom(f)$. Show that both the function $f$ and the domain $\dom(f)$ are indeed convex. 
+%\item Find 
+%\end{enumerate}
+
+
+\item Consider $f:\R^d\to \R$ be a function in $\R^d$ that is twice differentiable in some point $x^0$ and has a unique minimizer $x^\star$.  %a twice differentiable real-valued  $\alpha$-strongly convex and $\beta$-smooth function whose Hessian is $\gamma$-Lipschitz continuous. Let $x^\star$ be the unique minimizer of $f$. Consider one step of Newton's method with initialization $x^0$.
+\begin{enumerate}
+\item Argue that Newton's method will converge quadratically in the following setting: assume that the restriction of $f$ on $B(x^\star,\|x^0-x^\star\|)$ (the ball centered at $x^\star$ with $x^0$ on its boundary) is $\alpha$-strongly convex, $\beta$-smooth and has a Hessian that is $\gamma$-Lipschitz continuous, and assume also that $\|x^0-x^\star\|\leq 2\alpha/\gamma$. Hint: in Proposition 4.2, we proved this result when $f$ satisfies these conditions on $\R^d$, but do we really need those to hold on all of $\R^d$? You \textbf{do not} have to rewrite the proof of Proposition 4.2, only explain why the proof still holds with the weaker assumptions.
+\item Consider $f:x\in\R \mapsto \log(e^x+e^{-x})$. What is the minimizer $x^\star$ of $f$? Find the minimal $\alpha$ such that $\alpha$ is $\alpha$-strongly convex. Find the maximal $\beta$ such that $f$ is $\beta$-smooth. 
+\item Consider the initialization $x^0=1$. According to question 1., should Newton's method converge with this initialization? Plot $f$ and $f'$ through the 5 first iterations of the method. Hint: the second derivative $f''$ is $4/(3\sqrt{3})$-Lipschitz continuous (you \textbf{do not} have to prove this).
+\item Same question with initialization $x^0=1.1$.
+\end{enumerate}
+
+
+%\item In class we consider the logistic loss as a possible convexification of the $0-1$ loss. In this exercise, we consider another convexification of the $0-1$ loss called the hinge loss, and defined as $\ell_{\mathrm{hinge}}(y,y')= \max(1-yy',0)$. Let $\XX=\R^d$, $\YY=\{-1,+1\}$  and consider $n$ i.i.d. observations $(\b{x_1},\b{y_1}),\dots,(\b{x_n},\b{y_n})$ of distribution $P$. Define the set $\FF$ of affine classifiers:
+%\[\FF= \{f_{a,b}:x\mapsto \sign(\dotp{a,x}+b):\ a\in \R^d,\ b\in \R\}.\]
+%\begin{enumerate}
+%\item Show that for any $\lambda >0$, we have $f_{\lambda a,\lambda b}=f_{a,b}$, that is $(a,b)$ and $(\lambda a,\lambda b)$ represents the same hyperplane $H$
+%\item Show that for every hyperplane $H$, there exists a unique choice of $(a,b)$ with $b\geq 0$ representing the hyperplane $H$ such that $\min_{i=1,\dots,n} |\dotp{a,\b{x_i}} +b|=1$. Show that the point closest to $H$ among the $\b{x_i}$s is at distance $1/\|a\|$ from $H$. 
+%\item We call the distance $\b{y_i}(\dotp{a,\b{x_i}} +b)/\|a\|$ the \textbf{margin} of the separating hyperplane. Show that if a hyperplane correctly classifies $\b{x_i}$, then the margin is nonnegative.
+%\end{enumerate}
+
+\item In this exercise, we give some properties of the AdaBoost method. The AdaBoost method consists in aggregating some ''weak'' classifiers to create a stronger one. Let $\XX$ be a set of inputs and $\YY=\{-1,+1\}$ the set of outputs. We consider the exponential loss $\ell_{\exp}(y,y')=\exp(-yy')$. Let $(\b{x_1},\b{y_1}),\dots,(\b{x_n},\b{y_n})$ be a set of $n$ i.i.d. observations of distribution $P$. Let $\FF=\{f_1,\dots,f_m\}$ be a set of $T$ (possibly not very good) classifiers with values in $\{-1,+1\}$. The AdaBoost aims at finding a good classifier in the set
+\[ \mathrm{Span}(\FF) = \{F=\sum_{j=1}^m \alpha_j f_j:\ \alpha_j\in \R\}.\]
+To do so, we perform a greedy minimization of the associated empirical risk
+\[\RR_n(F) = \frac{1}{n}\sum_{i=1}^n \exp(-\b{y_i} F(\b{x_i})).\]
+More precisely, we compute a sequence of classifiers $\hat F_t$ for $t=1,\dots,T$ with initialization $\hat F_0=0$. Given $\hat F_{t-1}$, we consider
+\[\min_{\substack{j=1,\dots,p \\ \alpha\in \R}}  \RR_n(\hat F_{t-1} + \alpha f_j),\]
+If $\alpha_{t}$ and $j_{t}$ attain this minimum, we let $\hat F_{t} = \hat F_{t-1} + \alpha_{t} f_{j_{t}}$. The final classifier is defined as $\hat G(x) =  \sgn(\hat F_T(x))$.
+\begin{enumerate}
+\item Let $w_i^{(t)} = n^{-1}\exp(-\b{y_i}\hat F_{t-1}(\b{x_i}))$ and define  for $j=1,\dots,m$, the weighted empirical error of $f_j$ at time $t$ as
+\[ \eps_{t}(j) = \frac{\sum_{i=1}^n w_i^{(t)} \ones\{f_j(\b{x_i})\neq \b{y_i}\}}{\sum_{i=1}^n w_i^{(t)}}.\]
+\textcolor{red}{Prove that
+\[  \RR_n(\hat F_{t-1} + \alpha f_j)=e^{-\alpha} \sum_{i=1}^n w_i^{(t)}(1+(e^{2\alpha}-1)\eps_t(j)).\]
+Assume that we always have $\eps_{t}(j)<1/2$ for every $j$. 
+Show that at a fixed $j$, the function $\alpha\mapsto \RR_n(\hat F_{t-1} + \alpha f_j)$ is minimized at $\alpha = \frac{1}{2} \log\p{\frac{1-\eps_t(j)}{\eps_t(j)}}$ (Hint: compute the derivative).
+Conclude that the function $(\alpha,j)\mapsto  \RR_n(\hat F_{t-1} + \alpha f_j)$ is minimized at $(\alpha_t,j_t)$, where $j_t$ is the index $j$ minimizing $\eps_{t}(j)$. Let $E_t \defeq \min_{j=1,\dots,m} \eps_{t}(j)$. Show that 
+\[ \alpha_t = \frac{1}{2} \log\p{\frac{1-E_t}{E_t}}.\]}
+%\item Find a bound depending on $T$ and $m$ on the complexity of computing $T$ steps of the AdaBoost algorithm.
+\item Show that $\RR_n(\hat F_T) = \prod_{t=1}^T\sqrt{4E_t(1-E_t)}$. 
+\end{enumerate}
+If the set of ''weak'' classifiers is reasonable, we can expect that the minimal empirical error $E(t)$ at time $t$ is always smaller than $1/2-\gamma$ for some $\gamma>0$ (that is we do strictly better than ''guessing at random'' that would yield an empirical error of $1/2$ on average).
+\begin{itemize}
+\item[(c)]  Show that under this condition, $\RR_n(\hat F_T) \leq \exp(-2T\gamma^2)$. To put it another way, the empirical risk of the AdaBoost predictor converges exponentially fast to $0$.
+\end{itemize}
+The following result is true: the VC-dimension of the set of classifiers $\GG=\{\sgn\circ F:\ F\in\mathrm{Span}(\FF)\}$ is smaller than $cT\log(m)$ for some absolute constant $c$. \textbf{You do not have to prove this result.} 
+\begin{itemize}
+\item[(d)] Let $\tilde \RR_P(G)$ be the $P$-risk of a classifier $G$ \textbf{for the $0-1$ loss}. Show that under the previous conditions
+\[ \E[\tilde \RR_P(\hat G)] \leq \exp(-2T\gamma^2) + 2\sqrt{\frac{2cT\log(m)}{n} \log\p{\frac{en}{cT\log(m)}}}.\]
+\item[(f)] Let $\XX=\R^d$. A class of ''weak'' classifiers that is used in practice is given by the class $\FF_{\mathrm{stump}}$ of so-called ''stumps'' classifiers whose boundary is given by a hyperplane of the form $\{x\in \R^d:\ x_k=c\}$ for some index $k\in \{1,\dots,d\}$ and constant $c\in\R$. Use the \texttt{AdaBoostClassifier} function from \texttt{sklearn} to implement AdaBoost on the \texttt{spambase.csv} dataset on the class $\FF_{\mathrm{stump}}$ of classifiers (this is the default parameter in the \texttt{AdaBoostClassifier} function).  Plot the empirical risk for the $0-1$ loss on the training sample and on the testing sample as a function of the number of iterations $T$. What do you observe for $T=1$? For $T$ large? What is surprising?
+\end{itemize} 
+
+
+%
+%finding algorithm will iteratively weights the different observations $(\b{x_i},\b{y_i})$ by putting large weights $w_i$ on observations that are ''hard'' to classify using $\FF$. We will then encourage classifiers in $\FF$ to make good predictions on that ''hard'' cases. 
+%
+%Formally, we initialize the weights at value $w_{i,1}=1/n$ for $i=1,\dots,n$ and then update the weights for $t=1,\dots,T$:
+%
+%\begin{itemize}
+%\item[Step 1.] Find a classifier $f_t\in \FF$ that minimizes the weighted empirical risk
+%\[ \RR_{n,w_t}(f) = \sum_{i=1}^n w_{i,t} \exp(-\b{y_i}f(\b{x_i})).\]
+% Let $\eps_t = \RR_{n,w_t}(f_t)$.
+%\item[Step 2.] Let $\alpha_t=\frac{1}{2}\log\p{\frac{1-\eps_t}{\eps_t}}$.
+%\item[Step 3.] Update the weights by
+%\[ w_{i,t+1} = \frac{w_{i,t}\exp(-\alpha_t \b{y_i} f_t(\b{x_i}))}{Z_t},\]
+%where $Z_t$ is chosen so that the weights $\sum_{i=1}^n w_{i,t+1}=1$.
+%\end{itemize}
+%Our final estimator is the weighted aggregate given by 
+%\[F(x) = \sum_{t=1}^T \alpha_t f_t(x).\]
+%\begin{enumerate}
+%\item Define the exponential loss $\ell_{\exp}(y,y')=\exp(-yy')$. Why is this loss considered as a convexification of the $0-1$ loss?
+%\item Consider the empirical risk $\RR_n$ for the exponential loss. Show that 
+%\[ \RR_n(F) = \prod_{t=1}^T \sqrt{ \eps_t(1-\eps_t)}.\]
+%\end{enumerate}
+
+
+%\[ 
+%h(x) = \sgn(\sum_{t=1}^T \alpha_t h_t(x)),
+%\]
+%where the numbers $\alpha_t\in \R$ are weights. We use the exponential loss $\ell(y,y')= \exp(-yy')$, that is a convexification of the $0-1$-loss. Let $(\b{x_1},\b{y_1}),\dots,(\b{x_n},\b{y_n})$ be a set of $n$ i.i.d. observations having some distribution $P$. Let $\RR_n(h)$ be the empirical risk of the classifier $h$ associated with the exponential loss. AdaBoost is a greedy algorithm to minimize $\RR_n$ on $\HH$.
+%\begin{itemize}
+%\item[Step 1.] Initialize $\alpha_t=0$ for every $t$.
+%\item[Step 2.] 
+%\end{itemize}
+%\begin{enumerate}
+%\item  Show that there exists there exists a classifier $\hat h\in \HH$ that satisfies
+%\end{enumerate}
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,226 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!40!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\usepackage{bm, bbm}
+\usepackage{wasysym}
+\usepackage{marvosym}
+
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\usepackage[capitalize, noabbrev]{cleveref}
+\usepackage{fancyhdr}
+\usepackage[sc]{titlesec}
+\usepackage{lipsum}
+\usepackage{changepage} 
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[caption=false]{subfig}
+\usepackage[capitalize, noabbrev]{cleveref}
+
+
+
+\usepackage{enumitem}
+
+
+\newcommand{\p}[1]{\left(#1 \right)}
+\renewcommand{\b}[1]{\mathbf{#1 }}
+\newcommand{\dotp}[1]{\langle #1 \rangle}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\renewcommand{\t}[1]{\tilde{#1}}
+
+%%% Maths
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\eqdef}{=\vcentcolon}
+\newcommand{\op}[1]{\left\| #1  \right\|_{\mathrm{op}}}
+\newcommand{\ones}{\mathbf{1}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\VC}{\mathrm{VC}}
+\newcommand{\epi}{\mathrm{epi}}
+\newcommand{\dom}{\mathrm{dom}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\Id}{\mathrm{Id}}
+
+%%% Math operators
+
+\DeclareMathOperator*{\diam}{diam}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+
+
+%%% Letters
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\O}{\mathbb{O}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\S}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\Y}{\mathcal{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\renewcommand{\AA}{\mathcal{A}}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\EE}{\mathcal{E}}
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\GG}{\mathcal{G}}
+\newcommand{\HH}{\mathcal{H}}
+\newcommand{\II}{\mathcal{I}}
+\newcommand{\JJ}{\mathcal{J}}
+\newcommand{\KK}{\mathcal{K}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\NN}{\mathcal{N}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\QQ}{\mathcal{Q}}
+\newcommand{\RR}{\mathcal{R}}
+\newcommand{\Scal}{\mathcal{S}}
+\newcommand{\TT}{\mathcal{T}}
+\newcommand{\UU}{\mathcal{U}}
+\newcommand{\VV}{\mathcal{V}}
+\newcommand{\WW}{\mathcal{W}}
+\newcommand{\XX}{\mathcal{X}}
+\newcommand{\YY}{\mathcal{Y}}
+\newcommand{\ZZ}{\mathcal{Z}}
+
+\newcommand{\eps}{\varepsilon}
+
+\begin{document}
+
+\title{\sc Homework 7}
+\date{Due April 3 at 11pm} 
+\author{}
+\maketitle
+
+
+
+
+\newtheorem*{problem}{Problem}
+\newtheorem*{heuristic}{Heuristic}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{exercise}[theorem]{Exercise}
+
+
+Unless stated otherwise, justify any answers you give. You can work in groups, but each student
+must write their own solution based on their own understanding of the problem.
+
+When uploading your homework to Gradescope you will have to select the relevant pages
+for each question. Please submit each problem on a separate page (i.e., 1a and 1b can be on
+the same page but 1 and 2 must be on different pages). We understand that this may be
+cumbersome but this is the best way for the grading team to grade your homework assignments and provide feedback in a timely manner. Failure to adhere to these guidelines may
+result in a loss of points. Note that it may take some time to select the pages for your submission. Please plan accordingly. We suggest uploading your assignment at least 30 minutes
+before the deadline so you will have ample time to select the correct pages for your submission. If you are using \LaTeX, consider using the minted or listings packages for typesetting code.
+
+\medskip
+
+\begin{enumerate}
+\item Let $\RR$ be the set of rectangles in $\R^2$ with sides aligned with  the $x$ and $y$ axis. Consider the set $\FF$ of functions on $\R^2$ that are equal to $1$ on some rectangle $R\in \RR$ and $0$ everywhere else. What is the VC dimension of $\FF$? (Your answer can contain drawings.) \textcolor{red}{A rectangle $R\in\RR$ is of the form $[a,b]\times[c,d]$ for some real numbers $a\leq b$ and $c\leq d$.}
+\item For $i=1,\dots,k$, consider a set $\FF_i$ of functions from $\XX$ to $\{-1,+1\}$, with $\VC(\FF_i) \leq D$. Let $\HH$ be the set of functions that can be written in the form, for some $f_1\in\FF_1,\dots, f_k\in \FF_k$,
+\[
+h(x)=
+\begin{cases}
+1 &\text{ if } f_1(x)=\cdots =f_k(x)=1\\
+-1 &\text{ otherwise.}
+\end{cases}
+\]
+\begin{enumerate}
+\item Show that for every $x_1,\dots,x_n\in \XX$,
+\[ \log(\NN_{\HH}(x_1,\dots,x_n)) \leq \sum_{i=1}^k \log(\NN_{\FF_i}(x_1,\dots,x_n)).\]
+(Hint: for $h\in \HH$ (with corresponding functions $f_i\in \FF_i$), we have $(h(x_1),\dots,h(x_n)) = (\max_i f_i(x_1),\dots,\max_i f_i(x_n))$.)
+\item Use Sauer's lemma to show that there exists an absolute constant $C$ (not depending on $D$ or $k$) such that
+\[ \VC(\HH) \leq C D k \log(k).\]
+The optimal value of $C$ is not needed.
+(Hint: take $n=CDk\log(k)$ and use Sauer's lemma to show that $\NN_{\HH}(x_1,\dots,x_n) < 2^n$. \textcolor{red}{Hint 2: you may also use that the function $x\mapsto x\log(en/x)$ is increasing on $[0,n]$ as long as $n\geq 2$.})
+\end{enumerate}
+
+
+\begin{figure}\label{fig:hw}
+\centering
+\includegraphics[width = 0.5\textwidth]{homework7}
+%\vspace{-0.5cm}
+\caption{If the point $\b{x}$ is ''below'' the graph of $g_0$, then $\b{y}=+1$. Otherwise, $\b{y}=-1$.}
+\end{figure}
+%Let $\delta >0$ and define the function
+%\[
+%\ell_\delta(y,y') = \begin{cases}
+%\frac{1}{2} (y-y')^2 & \text{ if } |y-y'|\leq \delta \\
+%\delta (|y-y'|-\frac{1}{2}\delta) & \text{ otherwise.}
+%\end{cases}
+%\]
+%What is the Bayes predictor for the loss $\ell_\delta$?
+
+\item Let $k\geq 1$ be an integer. Let $g_0:[0,1] \to [0,1]$ be a $\CC^k$ function with $|g_0^{(i)}(x)|\leq R$ for all $x\in[0,1]$ and $0\leq i \leq k$. Let $\b{x}=(\b{x^{(1)}},\b{x^{(2)}})$ be a uniform random variable on $[0,1]^2$. Let $\b{y} = 1$ if $\b{x^{(2)}}\leq g_0(\b{x^{(1)}})$ and $\b{y}=-1$ otherwise (see Figure \ref{fig:hw}). We let $P$ be the law of $(\b{x},\b{y})$ and consider a sample of $n$ independent observations $(\b{x_1},\b{y_1}),\dots,(\b{x_n},\b{y_n})$ of law $P$. We consider the $\ell_{01}$ loss: the $P$-risk of a predictor $f:\XX\to\{-1,+1\}$ is given by $\E_P[\ones\{f(\b{x})\neq \b{y}\}] = P(f(\b{x})\neq\b{y})$.
+\begin{enumerate}
+\item What is the Bayes predictor $f^\star_P$? What is the Bayes risk $\RR_P(f^\star_P)$?
+\item Let $\GG$ be the set of $\CC^k$ functions $g$ with $|g^{(i)}(x)|\leq R$ for all $x\in[0,1]$ and $0\leq i \leq k$. We let $\FF$ be the set of classifiers $f$ that can be written as 
+\[
+f(x) = \begin{cases}
+1 &\text{ if } x^{(2)}\leq g(x^{(1)})\\
+-1 & \text{ otherwise,}
+\end{cases}
+\]
+where $g\in \GG$.  Consider the empirical risk minimizer $\hat f_{\FF}$. What is the approximation error of $\hat f_\FF$? What is $\RR_n(\hat f_{\FF})$ equal to? What is the performance of this predictor? 
+\item Let $\GG_{L,k}$ be the set of piecewise polynomial functions: a function $g\in \GG_{L,k}$ is of the form
+\begin{equation}
+g(x) = \sum_{i=0}^{k-1} a_{i,l} (x-x_l)^i
+\end{equation}
+for $x \in [l/L, (l+1)/L]$, $x_l = (l+1/2)/L$ and $l=0,\dots,(L-1)$. We then let $\FF_{l,k}$ be the set of classifiers $f$ that can be written as 
+\[
+f(x) = \begin{cases}
+1 &\text{ if } x^{(2)}\leq g(x^{(1)})\\
+-1 & \text{ otherwise,}
+\end{cases}
+\]
+where $g\in \GG_{l,k}$.  By writing a Taylor expansion (with integral form of the remainder) of $g_0$ around each $x_l$, give a bound on the approximation error $\inf_{f\in \FF_{L,k}} \RR_P(f) - \RR_P(f^\star_P)$.
+\item What is the VC dimension of $\FF_{1,\textcolor{red}{1}}$? What is the VC dimension of $\FF_{1,k}$? What is the VC dimension of $\FF_{L,\textcolor{red}{1}}$? What is the VC dimension of $\FF_{L,k}$? \textcolor{red}{You do not have to prove your answers in this question.}
+\item Consider the empirical risk minimizer $\hat f_{\FF_{L,k}}$. Using the previous question, find a bound on the expected estimation error. 
+\item Using the previous questions, give a bound on the expected excess of risk $\E[\RR_P(\hat f_{\FF_{L,k}})-\RR_P(f^\star_P)]$. How should $L$ be chosen to (approximately) minimize this expression?
+\end{enumerate}
+\end{enumerate}
+
+
+\end{document}

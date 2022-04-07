@@ -1,0 +1,191 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!40!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\usepackage{bm, bbm}
+\usepackage{wasysym}
+\usepackage{marvosym}
+
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\usepackage[capitalize, noabbrev]{cleveref}
+\usepackage{fancyhdr}
+\usepackage[sc]{titlesec}
+\usepackage{lipsum}
+\usepackage{changepage} 
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[caption=false]{subfig}
+\usepackage[capitalize, noabbrev]{cleveref}
+
+
+
+\usepackage{enumitem}
+
+
+\newcommand{\p}[1]{\left(#1 \right)}
+\renewcommand{\b}[1]{\mathbf{#1 }}
+\newcommand{\dotp}[1]{\langle #1 \rangle}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\renewcommand{\t}[1]{\tilde{#1}}
+
+%%% Maths
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\eqdef}{=\vcentcolon}
+\newcommand{\op}[1]{\left\| #1  \right\|_{\mathrm{op}}}
+\newcommand{\ones}{\mathbf{1}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\VC}{\mathrm{VC}}
+\newcommand{\epi}{\mathrm{epi}}
+\newcommand{\dom}{\mathrm{dom}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\Id}{\mathrm{Id}}
+
+%%% Math operators
+
+\DeclareMathOperator*{\diam}{diam}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+
+
+%%% Letters
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\O}{\mathbb{O}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\S}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\Y}{\mathcal{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\renewcommand{\AA}{\mathcal{A}}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\EE}{\mathcal{E}}
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\GG}{\mathcal{G}}
+\newcommand{\HH}{\mathcal{H}}
+\newcommand{\II}{\mathcal{I}}
+\newcommand{\JJ}{\mathcal{J}}
+\newcommand{\KK}{\mathcal{K}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\NN}{\mathcal{N}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\QQ}{\mathcal{Q}}
+\newcommand{\RR}{\mathcal{R}}
+\newcommand{\Scal}{\mathcal{S}}
+\newcommand{\TT}{\mathcal{T}}
+\newcommand{\UU}{\mathcal{U}}
+\newcommand{\VV}{\mathcal{V}}
+\newcommand{\WW}{\mathcal{W}}
+\newcommand{\XX}{\mathcal{X}}
+\newcommand{\YY}{\mathcal{Y}}
+\newcommand{\ZZ}{\mathcal{Z}}
+
+\newcommand{\eps}{\varepsilon}
+
+
+
+\begin{document}
+
+\title{\sc Homework 9}
+\date{Due April 17 at 11pm} 
+\author{}
+\maketitle
+
+
+
+
+\newtheorem*{problem}{Problem}
+\newtheorem*{heuristic}{Heuristic}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{exercise}[theorem]{Exercise}
+
+
+Unless stated otherwise, justify any answers you give. You can work in groups, but each student
+must write their own solution based on their own understanding of the problem.
+
+When uploading your homework to Gradescope you will have to select the relevant pages
+for each question. Please submit each problem on a separate page (i.e., 1a and 1b can be on
+the same page but 1 and 2 must be on different pages). We understand that this may be
+cumbersome but this is the best way for the grading team to grade your homework assignments and provide feedback in a timely manner. Failure to adhere to these guidelines may
+result in a loss of points. Note that it may take some time to select the pages for your submission. Please plan accordingly. We suggest uploading your assignment at least 30 minutes
+before the deadline so you will have ample time to select the correct pages for your submission. If you are using \LaTeX, consider using the minted or listings packages for typesetting code.
+
+\medskip
+
+\begin{enumerate}
+\item Show that the function $(x,x')\in \R^+\times \R^+ \mapsto \min(x,x')$ is a kernel. Hint: use that
+\[\min(x,x') = \int_0^\infty \ones\{s\leq \min(x,x')\}\dd s = \int_0^\infty \ones\{s\leq x\}\ones\{s\leq x'\}\dd s.\]
+
+
+\item Find an example of a (semi-definite) kernel, but such that we do not have $k(x,x')\geq 0$ for all $x,x'$. Find an example of a function $k$ such that $k(x,x')\geq 0$ for all $x,x'$, but $k$ is not a (semi-definite) kernel.
+
+%\item (Support Vector Machines) ??
+
+\item (Sparse Gram matrix approximation) Let $(\b{x_1},\b{y_1}),\dots,(\b{x_n},\b{y_n})$ be a training sample of $n$ observations with $\b{x_i}\in \XX$ and $\b{y_i}\in\R$. Let $k$ be a kernel on $\XX$, let $\b{G}$ be the Gram matrix associated with the observations and let $\b{Y}=(\b{y_1},\dots,\b{y_n})^\top \in \R^n$. Given a positive parameter $\lambda$, the predictor given by kernel ridge regression is $x\mapsto \sum_{i=1}^n \hat a_i k(x,\b{x_i})$, where 
+\[
+\hat a = (\b{G} + \lambda n\Id_n)^{-1}\b{Y}.
+\]
+Computing $\hat a$ requires to store $\b{G}$ ($n^2$ entries) and to inverse a $n\times n$ matrix ($n^3$ complexity). To speed up the process, we are going to consider a low-rank approximation of $\b{G}$.
+\begin{enumerate}
+\item Let $\Phi:\XX\to\HH$ be a feature map associated with $k$. Let $0\leq m\leq n$ and let $B$ be a $n\times m$ matrix. We approximate the vector $\Phi(\b{x_i})\in \HH$ using only the $m$ first vectors $\Phi(\b{x_1}),\dots,\Phi(\b{x_m})$ by defining $\tilde \Phi_B(\b{x_i}) = \sum_{j=1}^m B_{ij}\Phi(\b{x_j})$. Define the reconstruction error $\mathrm{Err}(B) \defeq \sum_{i=1}^n \|\tilde \Phi_B(\b{x_i})-\Phi(\b{x_i})\|^2_\HH$. Show that $\mathrm{Err}(B)$ is equal to
+\[ \sum_{i=1}^n \p{\b{G}_{ii} - 2 \sum_{j=1}^m B_{ij}G_{i,j} + \sum_{1\leq j,j'\leq m} B_{ij}B_{ij'} G_{jj'}}.\]
+\item Let $\b{G}^{nm}$ be the $n\times m$ matrix obtained by taking the $m$ first columns of $\b{G}$. Also, let $\b{G}^{mm}$ be the $m\times m$ matrix obtained by taking the first $m$ rows and first columns of $m$. Assume that $\b{G}^{mm}$ is invertible. Show that $\mathrm{Err}(B)$ is minimized for $B= \b{G}^{nm}(\b{G}^{mm})^{-1}$.
+\item Consider the feature map $\tilde \Phi_B$ with $B= \b{G}^{nm}(\b{G}^{mm})^{-1}$. Show that, for this feature map, the Gram matrix associated with the observations $(\b{x_1},\dots,\b{x_n})$ is equal to
+\[ \b{\tilde G} = \b{G}^{nm}(\b{G}^{mm})^{-1}(\b{G}^{nm})^\top.\]
+
+\item  Let $U$ be a $n\times m$ matrix, $V$ a $m\times m$ invertible matrix and $W$ be a $m\times n$ matrix. Assume that $(\Id_n + UVW)$ is invertible. The Sherman-Woodbury-Morrison formula states that
+\[ (\Id_n + UVW)^{-1} =\Id_n - U(V^{-1}+ WU)^{-1}W.\]
+ Assume that multiplying a $m\times n$ matrix by a $n\times p$ matrix requires $O(mnp)$ operations, and that inversing a $m\times m$ matrix requires $O(m^3)$ operations. Using those different elements, show that kernel ridge regression with feature map $\t \Phi_B$ can be computed using $O(nm^2)$ operations. What is the spatial complexity required to store $\b{\tilde G}$?
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}
