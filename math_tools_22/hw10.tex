@@ -1,0 +1,198 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!40!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\usepackage{bm, bbm}
+\usepackage{wasysym}
+\usepackage{marvosym}
+
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\usepackage[capitalize, noabbrev]{cleveref}
+\usepackage{fancyhdr}
+\usepackage[sc]{titlesec}
+\usepackage{lipsum}
+\usepackage{changepage} 
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[caption=false]{subfig}
+\usepackage[capitalize, noabbrev]{cleveref}
+
+
+
+\usepackage{enumitem}
+
+
+\newcommand{\p}[1]{\left(#1 \right)}
+\renewcommand{\b}[1]{\mathbf{#1 }}
+\newcommand{\dotp}[1]{\langle #1 \rangle}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\renewcommand{\t}[1]{\tilde{#1}}
+
+%%% Maths
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\eqdef}{=\vcentcolon}
+\newcommand{\op}[1]{\left\| #1  \right\|_{\mathrm{op}}}
+\newcommand{\ones}{\mathbf{1}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\VC}{\mathrm{VC}}
+\newcommand{\epi}{\mathrm{epi}}
+\newcommand{\dom}{\mathrm{dom}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\Id}{\mathrm{Id}}
+
+%%% Math operators
+
+\DeclareMathOperator*{\diam}{diam}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+
+
+%%% Letters
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\O}{\mathbb{O}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\S}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\Y}{\mathcal{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\renewcommand{\AA}{\mathcal{A}}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\EE}{\mathcal{E}}
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\GG}{\mathcal{G}}
+\newcommand{\HH}{\mathcal{H}}
+\newcommand{\II}{\mathcal{I}}
+\newcommand{\JJ}{\mathcal{J}}
+\newcommand{\KK}{\mathcal{K}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\NN}{\mathcal{N}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\QQ}{\mathcal{Q}}
+\newcommand{\RR}{\mathcal{R}}
+\newcommand{\Scal}{\mathcal{S}}
+\newcommand{\TT}{\mathcal{T}}
+\newcommand{\UU}{\mathcal{U}}
+\newcommand{\VV}{\mathcal{V}}
+\newcommand{\WW}{\mathcal{W}}
+\newcommand{\XX}{\mathcal{X}}
+\newcommand{\YY}{\mathcal{Y}}
+\newcommand{\ZZ}{\mathcal{Z}}
+
+\newcommand{\eps}{\varepsilon}
+
+
+
+\begin{document}
+
+\title{\sc Homework 10}
+\date{Due April 24 at 11pm} 
+\author{}
+\maketitle
+
+
+
+
+\newtheorem*{problem}{Problem}
+\newtheorem*{heuristic}{Heuristic}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{exercise}[theorem]{Exercise}
+
+
+Unless stated otherwise, justify any answers you give. You can work in groups, but each student
+must write their own solution based on their own understanding of the problem.
+
+When uploading your homework to Gradescope you will have to select the relevant pages
+for each question. Please submit each problem on a separate page (i.e., 1a and 1b can be on
+the same page but 1 and 2 must be on different pages). We understand that this may be
+cumbersome but this is the best way for the grading team to grade your homework assignments and provide feedback in a timely manner. Failure to adhere to these guidelines may
+result in a loss of points. Note that it may take some time to select the pages for your submission. Please plan accordingly. We suggest uploading your assignment at least 30 minutes
+before the deadline so you will have ample time to select the correct pages for your submission. If you are using \LaTeX, consider using the minted or listings packages for typesetting code.
+
+\medskip
+
+\begin{enumerate}
+\item (Equivalence of partition estimators and least square regression with feature maps) Let $\AA=\{A_1,\dots,A_J\}$ be a partition of $[0,1]^d$. Consider the feature map $\Phi:[0,1]^d \to \R^J$ defined by 
+\begin{equation}
+\Phi(x) = (\ones\{x\in A_1\},\dots,\ones\{x\in A_J\}).
+\end{equation}
+To be more explicit, the vector $\Phi(x)$ contains $0$ in all of its entries, except  in the entry $j$ that satisfies $x\in A_j$, where it contains a $1$. Let $(\b{x_1},\b{y_1}),\dots,(\b{x_n},\b{y_n})$ be a training sample from distribution $P$. We recall the definition of the partition estimator associated with $\AA$: let $I_j$ be the set of indexes such that $\b{x_i}\in A_j$ and let $\b{n_j}$ be the number of elements of $I_j$. \textbf{For the sake of simplicity, we assume that $\b{n_j}>0$ for every $j$.} The partition estimator is defined by
+\[ \hat f_\AA(x) = \frac{1}{\b{n_j}} \sum_{i\in I_j}\b{y_i}\]
+for every $x\in[0,1]^d$ such that $x\in A_j$. The goal of this problem is to show that the partition estimator is equal to the least square regression estimator obtained with the feature map $\Phi$. Let $\b{\tilde X}$ be the $n\times K$ matrix whose rows are given by the vectors $\Phi(\b{x_i})$.
+\begin{enumerate}
+\item Show that $\b{\tilde X}^\top \b{\tilde X}$ is a $K\times K$ diagonal matrix equal to 
+\[ \begin{pmatrix}
+\b{n_1} & 			& 		& \\
+ 		& \b{n_2}	&		& \\
+ 		&			& \ddots& \\
+ 		&			&		& \b{n_J}
+\end{pmatrix}.\]
+\item Recall from the previous chapter that the optimal vector $\hat a$ in least-square regression is equal to $\hat a = (\b{\tilde X}^\top \b{\tilde X})^{-1} \b{\tilde X}^\top \b{Y}$, where $\b{Y}\in \R^n$ is the vector with entries $\b{y_i}$. The associated predictor is then given by $\hat f_{\mathrm{LS}} (x) = \dotp{\hat a,\Phi(x)}$. Show that $\hat f_{\mathrm{LS}} (x) =\hat f_\AA(x)$ for every $x\in [0,1]^d$.
+\end{enumerate}
+
+
+%\item ($k$-d tree) Let $x\in [0,1]^d$ and $\b{x_1},\dots,\b{x_n}$ be $n$ observations in $[0,1]^d$. To compute naively
+
+\item (Neighbors in high dimension) %In this problem, we aim at explaning why nearest-neighbors methods are doomed to fail in large dimension. We 
+Assume that we have access to $n$ observations $\b{x_1},\dots,\b{x_n}$ that are uniformly sampled in the cube $[0,1]^d$. We assume that the dimension $d$ is ''large''. 
+\begin{enumerate}
+%\item Let $1\leq i<j\leq n$.  Show that $\E[\|\b{x_i}-\b{x_j}\|^2] = d/6$. Hint: each of the coordinate $\b{x_i^{(l)}}$ of the vector $\b{x_i}$ follows a uniform random variable between $0$ and $1$. You may also use without proof that $\E[(\b{u}-\b{u'})^2]=1/6$ if $\b{u}$ and $\b{u'}$ are two independent uniform variables on $[0,1]$.
+%\item Show that $\mathrm{Var}(\|\b{x_i}-\b{x_j}\|^2) = d\cdot (7/180)$. Hint: the different coordinates of $\b{x_i}$ are independent, and the variance of the sum of independent random variables is equal to the sum of the variance. You may use without proof that $\mathrm{Var}((\b{u}-\b{u'})^2) = 7/180$ if $\b{u}$ and $\b{u'}$ are two independent uniform variables on $[0,1]$.
+%The two previous questions indicate that the standard deviation of $\|\b{x_i}-\b{x_j}\|^2$ is of order $\sqrt{d}$ whereas its expectation is of order $d$. Therefore, the fluctuations of $\|\b{x_i}-\b{x_j}\|^2$ around its expectation are negligible.
+\item  Sample $n=500$ uniform observations in the cube $[0,1]^d$ for $d=2, 10, 500$ and $10,000$. Let $\b{x}$ be another uniform observation in $[0,1]^d$. Show the plot of the histogram of the distances $\|\b{x}-\b{x_i}\|^2$ (for $i=1,\dots,n$) for those different values of $d$. Compare the standard deviation and the expectation for different values of $d$. What do you observe?
+\item %Let $\b{x}$ be a new input sampled uniformly in $[0,1]^d$.
+Argue thanks to the previous question that all the squared distances $\|\b{x}-\b{x_i}\|^2$ are roughly equal in high dimension. Explain why in high-dimension the notion of ''nearest-neighbor'' becomes irrelevant.%we may consider that $\b{x}$ is almost equidistant to all the inputs $\b{x_i}$, so that 
+\end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}
