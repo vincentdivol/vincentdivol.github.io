@@ -1,0 +1,229 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!40!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\usepackage{bm, bbm}
+\usepackage{wasysym}
+\usepackage{marvosym}
+
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\usepackage[capitalize, noabbrev]{cleveref}
+\usepackage{fancyhdr}
+\usepackage[sc]{titlesec}
+\usepackage{lipsum}
+\usepackage{changepage} 
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[caption=false]{subfig}
+\usepackage[capitalize, noabbrev]{cleveref}
+
+
+
+\usepackage{enumitem}
+
+
+\newcommand{\p}[1]{\left(#1 \right)}
+\renewcommand{\b}[1]{\mathbf{#1 }}
+\newcommand{\dotp}[1]{\langle #1 \rangle}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\renewcommand{\t}[1]{\tilde{#1}}
+
+%%% Maths
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\eqdef}{=\vcentcolon}
+\newcommand{\op}[1]{\left\| #1  \right\|_{\mathrm{op}}}
+\newcommand{\ones}{\mathbf{1}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\VC}{\mathrm{VC}}
+\newcommand{\epi}{\mathrm{epi}}
+\newcommand{\dom}{\mathrm{dom}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\Id}{\mathrm{Id}}
+
+%%% Math operators
+
+\DeclareMathOperator*{\diam}{diam}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+
+
+%%% Letters
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\O}{\mathbb{O}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\S}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\Y}{\mathcal{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\renewcommand{\AA}{\mathcal{A}}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\EE}{\mathcal{E}}
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\GG}{\mathcal{G}}
+\newcommand{\HH}{\mathcal{H}}
+\newcommand{\II}{\mathcal{I}}
+\newcommand{\JJ}{\mathcal{J}}
+\newcommand{\KK}{\mathcal{K}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\NN}{\mathcal{N}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\QQ}{\mathcal{Q}}
+\newcommand{\RR}{\mathcal{R}}
+\newcommand{\Scal}{\mathcal{S}}
+\newcommand{\TT}{\mathcal{T}}
+\newcommand{\UU}{\mathcal{U}}
+\newcommand{\VV}{\mathcal{V}}
+\newcommand{\WW}{\mathcal{W}}
+\newcommand{\XX}{\mathcal{X}}
+\newcommand{\YY}{\mathcal{Y}}
+\newcommand{\ZZ}{\mathcal{Z}}
+
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\rvline}{\hspace*{-\arraycolsep}\vline\hspace*{-\arraycolsep}}
+
+\begin{document}
+
+\title{\sc Homework 11}
+\date{Due May 1 at 11pm} 
+\author{}
+\maketitle
+
+
+
+
+\newtheorem*{problem}{Problem}
+\newtheorem*{heuristic}{Heuristic}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{exercise}[theorem]{Exercise}
+
+
+Unless stated otherwise, justify any answers you give. You can work in groups, but each student
+must write their own solution based on their own understanding of the problem.
+
+When uploading your homework to Gradescope you will have to select the relevant pages
+for each question. Please submit each problem on a separate page (i.e., 1a and 1b can be on
+the same page but 1 and 2 must be on different pages). We understand that this may be
+cumbersome but this is the best way for the grading team to grade your homework assignments and provide feedback in a timely manner. Failure to adhere to these guidelines may
+result in a loss of points. Note that it may take some time to select the pages for your submission. Please plan accordingly. We suggest uploading your assignment at least 30 minutes
+before the deadline so you will have ample time to select the correct pages for your submission. If you are using \LaTeX, consider using the minted or listings packages for typesetting code.
+
+\medskip
+
+\begin{enumerate}
+\item (Kernel $k$-means) The goal of this exercise is to show that we can ''kernelize'' Lloyd's algorithm. Let $x_1,\dots,x_n$ be $n$ points in a set $\XX$. Let $K:\XX\times \XX\to \R$ be a kernel with associated feature map $\Phi:\XX\to \HH$, where $\HH$ is the RKHS of $K$. Consider Lloyd's algorithm applied to the points $\Phi(x_1),\dots,\Phi(x_n)$ with $k$ centroids. We initialize the centroids as $y_1^0,\dots,y_k^0$ being equal to $\Phi(x_1),\dots,\Phi(x_k)$.%(or equivalently $k$ random observations).
+\begin{enumerate}
+\item %Considerate the iterates $y_1^t,\dots,y_l^t$ of Lloyd's algorithm for $t\geq 1$. 
+For $t\geq 1$, let $I_l^t$ and $n_l^t$ be defined as in Algorithm 1 in the lecture notes. For $t=0$, we let $I_l^0=\{l\}$ and $n_l^0=1$. The iterates of Lloyd's algorithm then satisfy for every $t\geq 1$, $y^t_l=\frac{1}{n_l^{t-1}}\sum_{i\in I_l^{t-1}} \Phi(x_i)$ (this follows from the definition of the algorithm and you do not have to prove this). Show that for any $t\geq 1$, the squared distance between a point $\Phi(x_j)$ and a centroid $y_l^t$ is equal to
+\begin{align*}
+ &\|y_l^t-\Phi(x_j)\|_\HH^2\\
+&= \frac{1}{(n_l^{t-1})^2} \sum_{i,i'\in I_l^{t-1}} (K(x_i,x_{i'})+K(x_j,x_j) - K(x_i,x_j)-K(x_{i'},x_j)).
+\end{align*}
+%Hint: for any $t\geq 1$, we have $y_l^t=\frac{1}{n_l^{t-1}}\sum_{i\in I_l^{t-1}} \Phi(x_i)$ by definition of the algorithm.
+\item Show by induction on $t\geq 0$ that we can compute all the clusters $I_l^t$ without ever having to compute any of the vectors $\Phi(x_i)$ (but only the kernel values $K(x_i,x_j)$).
+%\begin{align*}
+%\|y_l^t-\Phi(x_j)\|_\HH^2 &= \|\frac{1}{n_l^{t-1}}\sum_{i\in I_l^{t-1}} \Phi(x_i)-\Phi(x_j)\|_\HH^2 \\
+%&= \|\frac{1}{n_l^{t-1}}\sum_{i\in I_l^{t-1}} (\Phi(x_i)-\Phi(x_j))\|_\HH^2 \\
+%&= \frac{1}{(n_l^{t-1})^2} \sum_{i,i'\in I_l^{t-1}} \dotp{\Phi(x_i)-\Phi(x_j),\Phi(x_{i'})-\Phi(x_j)}_\HH \\
+%&= \frac{1}{(n_l^{t-1})^2} \sum_{i,i'\in I_l^{t-1}} (
+%k(x_i,x_{i'})+k(x_j,x_j) - k(x_i,x_j)-k(x_{i'},x_j)).
+%\end{align*} 
+\end{enumerate}
+
+\item In class, we stated that small eigenvalues of the Laplacian matrix of some graph $\GG$ correspond to clusters in $\GG$. The goal of this exercise is to check this intuition on a toy example. Let $E_n$ be the $n\times n$ matrix with $1$ in every entry. Consider the graph $\GG$ with $2n$ vertices and weight matrix
+\[ W = \begin{pmatrix}
+E_n & qE_n\\
+qE_n & E_n
+\end{pmatrix},\]
+where $q\in [0,1]$ is a parameter.
+\begin{enumerate}
+\item Depending on the value of $q$, what is the number of connected components of $\GG$?
+\item Assume that $q=0$. Give an orthonormal basis of the eigenspace of $L$ corresponding to the eigenvalue $0$.
+\item Same question for $q>0$. %Give an orthonormal basis of the eigenspace of $L$ corresponding to the eigenvalue $0$.
+\item Assume that $q>0$. Let $e\in \R^n$ be the vector with ones in all of its entries. Show that the vector $u=(e,-e)\in \R^{2n}$ is an eigenvector of $L$, with associated eigenvalue $\lambda=2q/(q+1)$. 
+\item By considering the regime $q\ll 1$, conclude that the existence of two small eigenvalues is related to the existence of two clusters in the graph $\GG$.
+\end{enumerate}
+%
+%\begin{itemize}
+%\item two vertices with index $1\leq i,j\leq n$ are always linked by an edge,
+%\item two vertices with index $n< i,j\leq 2n$ are always linked by an edge,
+%\item the vertex $1$ is linked with the vertex $n+1$,
+%\item no other two vertices are linked by an edge.
+%\end{itemize}
+%\begin{enumerate}
+%\item Let $E_n$ be the $n\times n$ matrix with $1$ in every entry and let $E_{11}$ be the $n\times n$ matrix with a $1$ at the first entry of the matrix (row $1$ and column $1$) and $0$ everywhere else. Show that the weight matrix of the graph is the block matrix
+%\[ W = \begin{pmatrix}
+%E_n & \rvline & E_{11}\\
+%\hline
+%E_{11} &\rvline &E_n 
+%\end{pmatrix}.\]
+%\item Let $D_n$ be the diagonal matrix
+%\[ D_n = \begin{pmatrix}
+%n+1 & 	& 		& \\
+% 	& n & 		& \\
+% 	&   & \ddots& \\ 
+% 	&   & 		&n 
+%\end{pmatrix}.\]
+%Show that the degree matrix $D$ of the graph is given by 
+%\[ W = \begin{pmatrix}
+%D_n & \rvline & \\
+%\hline
+% &\rvline &D_n 
+%\end{pmatrix}.\]
+%\item Consider the Laplacian matrix $L$ associated with the graph $\GG$. What is the multiplicity of $0$ as an eigenvalue of $L$? Give an associated eigenvector.
+%\item 
+%
+%\end{enumerate}
+\end{enumerate}
+
+
+\end{document}
