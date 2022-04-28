@@ -1,0 +1,205 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={blue!40!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\usepackage{bm, bbm}
+\usepackage{wasysym}
+\usepackage{marvosym}
+
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\usepackage[capitalize, noabbrev]{cleveref}
+\usepackage{fancyhdr}
+\usepackage[sc]{titlesec}
+\usepackage{lipsum}
+\usepackage{changepage} 
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[caption=false]{subfig}
+\usepackage[capitalize, noabbrev]{cleveref}
+
+
+
+\usepackage{enumitem}
+
+
+\newcommand{\p}[1]{\left(#1 \right)}
+\renewcommand{\b}[1]{\mathbf{#1 }}
+\newcommand{\dotp}[1]{\langle #1 \rangle}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+\renewcommand{\t}[1]{\tilde{#1}}
+
+%%% Maths
+\newcommand{\defeq}{\vcentcolon=}
+\newcommand{\eqdef}{=\vcentcolon}
+\newcommand{\op}[1]{\left\| #1  \right\|_{\mathrm{op}}}
+\newcommand{\ones}{\mathbf{1}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\VC}{\mathrm{VC}}
+\newcommand{\epi}{\mathrm{epi}}
+\newcommand{\dom}{\mathrm{dom}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\Id}{\mathrm{Id}}
+
+%%% Math operators
+
+\DeclareMathOperator*{\diam}{diam}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+
+
+%%% Letters
+\newcommand{\A}{\mathbb{A}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\G}{\mathbb{G}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\I}{\mathbb{I}}
+\newcommand{\J}{\mathbb{J}}
+\newcommand{\K}{\mathbb{K}}
+\renewcommand{\L}{\mathbb{L}}
+\newcommand{\M}{\mathbb{M}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\O}{\mathbb{O}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\S}{\mathbb{S}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\V}{\mathbb{V}}
+\newcommand{\W}{\mathbb{W}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\Y}{\mathcal{Y}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\renewcommand{\AA}{\mathcal{A}}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\DD}{\mathcal{D}}
+\newcommand{\EE}{\mathcal{E}}
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\GG}{\mathcal{G}}
+\newcommand{\HH}{\mathcal{H}}
+\newcommand{\II}{\mathcal{I}}
+\newcommand{\JJ}{\mathcal{J}}
+\newcommand{\KK}{\mathcal{K}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\MM}{\mathcal{M}}
+\newcommand{\NN}{\mathcal{N}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\QQ}{\mathcal{Q}}
+\newcommand{\RR}{\mathcal{R}}
+\newcommand{\Scal}{\mathcal{S}}
+\newcommand{\TT}{\mathcal{T}}
+\newcommand{\UU}{\mathcal{U}}
+\newcommand{\VV}{\mathcal{V}}
+\newcommand{\WW}{\mathcal{W}}
+\newcommand{\XX}{\mathcal{X}}
+\newcommand{\YY}{\mathcal{Y}}
+\newcommand{\ZZ}{\mathcal{Z}}
+
+\newcommand{\eps}{\varepsilon}
+
+\newcommand{\rvline}{\hspace*{-\arraycolsep}\vline\hspace*{-\arraycolsep}}
+
+\begin{document}
+
+\title{\sc Homework 12}
+\date{Due May 7 at 11pm} 
+\author{}
+\maketitle
+
+
+
+
+\newtheorem*{problem}{Problem}
+\newtheorem*{heuristic}{Heuristic}
+\newtheorem*{conjecture}{Conjecture}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{exercise}[theorem]{Exercise}
+
+
+Unless stated otherwise, justify any answers you give. You can work in groups, but each student
+must write their own solution based on their own understanding of the problem.
+
+When uploading your homework to Gradescope you will have to select the relevant pages
+for each question. Please submit each problem on a separate page (i.e., 1a and 1b can be on
+the same page but 1 and 2 must be on different pages). We understand that this may be
+cumbersome but this is the best way for the grading team to grade your homework assignments and provide feedback in a timely manner. Failure to adhere to these guidelines may
+result in a loss of points. Note that it may take some time to select the pages for your submission. Please plan accordingly. We suggest uploading your assignment at least 30 minutes
+before the deadline so you will have ample time to select the correct pages for your submission. If you are using \LaTeX, consider using the minted or listings packages for typesetting code.
+
+\medskip
+
+\textbf{This homework is a two-part problem on ridge regression. In the first part, we study ridge regression in the framework of risk minimization with an appropriate loss. The goal of the second part is to assess the performance of stochastic gradient descent on this problem.}
+
+\begin{enumerate}
+\item We consider the regression setting
+\[ \b{y} = \dotp{\theta_0,\b{x}} + \eps \]
+where $\theta_0 \in \R^d$ with $\|\theta_0\|\leq R$, $\b{x}\in\R^d$ and $\eps$ is a noise term independent from $\b{x}$. We assume that $\E[\b{x}\b{x}^\top ] =  \Id_d$ (we then say that $\b{x}$ is isotropic). We also assume that the noise is centered $\E[\eps]= 0$ and that $\E[\eps^2]\leq \sigma^2$. We call $P$ the joint distribution of $\b{x}$ and $\b{y}$. 
+\begin{enumerate}
+
+\item Let $\lambda >0$. We define the loss function $\ell_\lambda(y,y')= (y-y')^2 + \lambda y'^2$. The $P$-risk of a predictor $f:\R^d\to \R$ is by definition equal to 
+\[ \RR_P(f) = \E_P[\ell_\lambda(\b{y},f(\b{x}))] = \E_P[(\b{y}-f(\b{x}))^2] + \lambda \E[f(\b{x})^2].\]
+Show that 
+\[ \RR_P(f) = \E_P[(\dotp{\theta_0,\b{x}}-f(\b{x}))^2] + \lambda \E[f(\b{x})^2] + \sigma^2.\]
+Show that the Bayes predictor is given by $f^\star_P(x)=\dotp{x, \frac{\theta_0}{1+\lambda}}$. (Hint: minimize the quantity $z\mapsto (\dotp{\theta_0,\b{x}}-z)^2 + \lambda z^2$.)
+\item Show that the Bayes risk is equal to 
+\[ \RR_P^\star = \RR_P(f^\star_P) = \frac{\lambda \|\theta_0\|^2}{1+\lambda} + \sigma^2.\]
+\item For $\theta\in \R^d$, we let $f_\theta$ be the linear predictor $x\mapsto \dotp{\theta,x}$. Show that
+\[ \RR_P(f_\theta) = \|\theta-\theta_0\|^2 + \lambda\|\theta\|^2 +  \sigma^2.\]
+\end{enumerate}
+\item Let $(\b{x_1},\b{y_1}),\dots,(\b{x_n},\b{y_n})$ be a sample of $n$ i.i.d.~observations from distribution $P$.
+\begin{enumerate}
+\item Show that the function $\theta\mapsto \RR_P(f_\theta)$ is $\alpha$-strongly convex for $\alpha=2(\lambda +1)$.
+\item %Show that $\nabla \RR_P(f_\theta) = 2(\theta-\theta_0)+2\lambda \theta$. 
+Show that $\b{v_i}= 2\b{x_i}(\dotp{\b{x_i},\theta} -\b{y_i}) + 2\lambda \theta$ is an unbiased estimate of $\nabla \RR_P(f_\theta)$ (that is prove that $\E[\b{v_i}]=\nabla \RR_P(f_\theta)$).
+\item  Assume that $\b{x}$ is bounded: there exists $M>0$ such that $|\b{x}|\leq M$ almost surely. Show that for every $\theta$ with $\|\theta\|\leq R$, it holds that \[\E[\|\b{v_i}\|^2] \leq C_1\lambda^2 R^2+ C_2 R^2+ C_3 \sigma^2\] for some constants $C_1,C_2,C_3$ that may depend on $M$. Show that one can apply Theorem 5 in the lecture notes in this setting. How small does the excess of risk get with stochastic gradient descent (with projection step on $B(0;R)$) using the $n$ samples? (You may only give the order of convergence with respect to $n$, not the exact constant appearing in the bound.) What is the time complexity of this method (depending on $d$ and $n$)?
+\end{enumerate}
+
+\textbf{The last question is completely optional and will not get you any additional points. It consists in comparing SGD with the ''traditional'' way of computing ridge regression.}
+
+\item \textbf{(Optional)} We let $\b{Y}=(\b{y_1},\dots,\b{y_n})\in \R^n$ and $\b{X}$  be the $n\times d$ matrix with rows given by $\b{x_1},\dots,\b{x_n}$. We recall that the ridge regression estimator is
+ given by
+\[ \hat \theta_{\mathrm{RR}} = \p{\frac{\b{X}^\top \b{X}}{n} + \lambda  \Id_d}^{-1} \frac{\b{X}^\top \b{Y}}{n}.\]
+\begin{enumerate}
+\item Show that the excess of risk of $f_\theta$ is equal to
+\[ \RR_P(f_\theta)-\RR_P^\star = (1+\lambda) \|\theta-\frac{\theta_0}{1+\lambda}\|^2.\]
+\item Using the law of large number, show that $\hat \theta$ converges to $\theta_0/(1+\lambda)$. (Hint: What is $\E[\b{x_i}\b{y_i}]$? What is $\E[\b{x_i}\b{x_i}^\top]$?)
+\item Show that the excess of risk of $f_{\hat \theta_{\mathrm{RR}}}$ is of order at most $1/n$ (up to constants depending on $\sigma$, $R$ and $M$).
+\item What is the time complexity required to compute $\hat \theta_{\mathrm{RR}}$? If $d\gg 1$, is it faster to compute $\hat \theta_{\mathrm{RR}}$ or to apply SGD for $n$ steps?
+\end{enumerate}
+
+
+\end{enumerate}
+
+
+\end{document}
