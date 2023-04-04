@@ -8,6 +8,17 @@
     <language>en-US</language>
     <lastBuildDate>Wed, 11 Sep 2019 14:51:18 -0500</lastBuildDate><atom:link href="https://vincentdivol.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Notes/Teaching</title>
+      <link>https://vincentdivol.github.io/teaching/</link>
+      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://vincentdivol.github.io/teaching/</guid>
+      <description>Notes Notes on boosting Mathematical Tools for Data Science (Spring 2022) In Spring 2021, I taught with Carlos Fernandez-Granda the Mathematical Tools for Data Science course in the Master&amp;rsquo;s in Data Science at NYU (DS-GA 1013).
+The full lecture notes can be found here.
+Week Lecture notes Manuscript notes Homeworks Solutions 1 Empirical risk minimization Manuscript 1 Homework 1 Solution 1 2 Convex optimization Manuscript 2 Homework 2 Solution 2 3 Kernel methods Manuscript 3 Homework 3 Solution 3 4 Local averaging methods Manuscript 4 Homework 4 Solution 4 5 Clustering methods Manuscript 5 Homework 5 Solution 5 5 Stochastic convex optimization Manuscript 6 Homework 6 Solution 6 </description>
+    </item>
+    
+    <item>
       <title>Publications</title>
       <link>https://vincentdivol.github.io/publications/</link>
       <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
@@ -15,17 +26,6 @@
       <guid>https://vincentdivol.github.io/publications/</guid>
       <description>Ph.D. Thesis Here is my Ph.D. thesis manuscript. You can find the corresponding slides there, and a video recording of the defense itself there.
 Preprints Pooladian A-A., Divol, V., Niles-Weed J., (2023). Minimax estimation of discontinuous optimal transport maps: The semi-discrete case. arxiv Divol, V., Niles-Weed J., Pooladian A-A. (2022). Optimal transport map estimation in general function spaces. arxiv Journal Divol, V. (2022). Measure estimation on manifolds: an optimal transport approach.</description>
-    </item>
-    
-    <item>
-      <title>Teaching</title>
-      <link>https://vincentdivol.github.io/teaching/</link>
-      <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://vincentdivol.github.io/teaching/</guid>
-      <description>In Spring 2021, I taught with Carlos Fernandez-Granda the Mathematical Tools for Data Science course in the Master&amp;rsquo;s in Data Science at NYU (DS-GA 1013).
-The full lecture notes can be found here.
-Mathematical Tools for Data Science (Spring 2022) Week Lecture notes Manuscript notes Homeworks Solutions 1 Empirical risk minimization Manuscript 1 Homework 1 Solution 1 2 Convex optimization Manuscript 2 Homework 2 Solution 2 3 Kernel methods Manuscript 3 Homework 3 Solution 3 4 Local averaging methods Manuscript 4 Homework 4 Solution 4 5 Clustering methods Manuscript 5 Homework 5 Solution 5 5 Stochastic convex optimization Manuscript 6 Homework 6 Solution 6 </description>
     </item>
     
     <item>
