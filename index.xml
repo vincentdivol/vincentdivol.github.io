@@ -6,37 +6,28 @@
     <description>Recent content on Vincent Divol</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 11 Sep 2019 14:51:18 -0500</lastBuildDate><atom:link href="https://vincentdivol.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Sep 2019 14:51:18 -0500</lastBuildDate>
+    <atom:link href="https://vincentdivol.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Publications</title>
       <link>https://vincentdivol.github.io/publications/</link>
       <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://vincentdivol.github.io/publications/</guid>
-      <description>Ph.D. Thesis Here is my Ph.D. thesis manuscript. You can find the corresponding slides there, and a video recording of the defense itself there.
-Preprints Pooladian A-A., Divol, V., Niles-Weed J., (2023). Minimax estimation of discontinuous optimal transport maps: The semi-discrete case. arxiv Divol, V., Niles-Weed J., Pooladian A-A. (2022). Optimal transport map estimation in general function spaces. arxiv Divol, V. (2021). A short proof on the rate of convergence of the empirical measure for the Wasserstein distance.</description>
+      <description>Ph.D. Thesis Here is my Ph.D. thesis manuscript. You can find the corresponding slides there, and a video recording of the defense itself there.&#xA;Preprints Arnal C., Cohen-Steiner D., Divol, V. (2023). Critical points of the distance function to a generic submanifold. arxiv Divol, V., Niles-Weed J., Pooladian A-A. (2022). Optimal transport map estimation in general function spaces. arxiv Divol, V. (2021). A short proof on the rate of convergence of the empirical measure for the Wasserstein distance.</description>
     </item>
-    
     <item>
       <title>Teaching</title>
       <link>https://vincentdivol.github.io/teaching/</link>
       <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://vincentdivol.github.io/teaching/</guid>
-      <description>Notes Some teaching notes on basic ML algorithms.
-Notes on boosting Notes on decision trees and random forests Mathematical Tools for Data Science (Spring 2022) In Spring 2021, I taught with Carlos Fernandez-Granda the Mathematical Tools for Data Science course in the Master&amp;rsquo;s in Data Science at NYU (DS-GA 1013).
-The full lecture notes can be found here.
-Week Lecture notes Manuscript notes Homeworks Solutions 1 Empirical risk minimization Manuscript 1 Homework 1 Solution 1 2 Convex optimization Manuscript 2 Homework 2 Solution 2 3 Kernel methods Manuscript 3 Homework 3 Solution 3 4 Local averaging methods Manuscript 4 Homework 4 Solution 4 5 Clustering methods Manuscript 5 Homework 5 Solution 5 5 Stochastic convex optimization Manuscript 6 Homework 6 Solution 6 </description>
+      <description>Algèbre linéaire (Automne 2023) Notes de cours (version modifiée du polycopié de Guillaume Legendre)&#xA;Notes Some teaching notes on basic ML algorithms.&#xA;Notes on boosting Notes on decision trees and random forests Mathematical Tools for Data Science (Spring 2022) In Spring 2021, I taught with Carlos Fernandez-Granda the Mathematical Tools for Data Science course in the Master&amp;rsquo;s in Data Science at NYU (DS-GA 1013).&#xA;The full lecture notes can be found here.</description>
     </item>
-    
     <item>
       <title>First</title>
       <link>https://vincentdivol.github.io/news/first/</link>
       <pubDate>Wed, 11 Sep 2019 14:51:18 -0500</pubDate>
-      
       <guid>https://vincentdivol.github.io/news/first/</guid>
       <description>test</description>
     </item>
-    
   </channel>
 </rss>
