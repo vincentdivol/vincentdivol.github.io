@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>golang on Vincent Divol</title>
+    <title>Golang on Vincent Divol</title>
     <link>https://vincentdivol.github.io/blog/golang/</link>
-    <description>Recent content in golang on Vincent Divol</description>
+    <description>Recent content in Golang on Vincent Divol</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 11 Sep 2019 14:51:18 -0500</lastBuildDate>
